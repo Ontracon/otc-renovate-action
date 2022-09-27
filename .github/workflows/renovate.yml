@@ -41,6 +41,6 @@ jobs:
           token: 'x-access-token:${{ steps.otc-tests.outputs.token }}'
           configurationFile: renovate-config.js
         env:
-          LOG_LEVEL: 'debug'
+          #LOG_LEVEL: 'debug'
           RENOVATE_AUTODISCOVER: 'true'
           RENOVATE_DRY_RUN: 'true'
