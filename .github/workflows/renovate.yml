@@ -3,8 +3,8 @@ name: renovate
 # Controls when the workflow will run
 on:
   workflow_dispatch:
-  # schedule:
-
+   schedule:
+   - cron: "0 0 * * *"
 env:
   GITHUB_COM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -43,4 +43,4 @@ jobs:
         env:
           #LOG_LEVEL: 'debug'
           RENOVATE_AUTODISCOVER: 'true'
-          RENOVATE_DRY_RUN: 'true'
+          #RENOVATE_DRY_RUN: 'true'
