@@ -10,12 +10,12 @@ module.exports = {
   rebaseWhen: 'behind-base-branch',
   rebaseStalePrs: true,
   recreateClosed: true,
-  automerge: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
     {
       description: 'lockFileMaintenance',
       automerge: true,
+      automergeType: 'branch',
       matchUpdateTypes: [
         'pin',
         'digest',
