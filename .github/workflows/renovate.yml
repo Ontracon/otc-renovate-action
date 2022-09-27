@@ -1,0 +1,46 @@
+name: renovate
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+  # schedule:
+
+env:
+  GITHUB_COM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  Renovate:
+    runs-on: [ ubuntu-latest ]
+
+    steps:
+      - name: Get APP token
+        id: otc-tests
+        uses: peter-murray/workflow-application-token-action@v2
+        with:
+          application_id: ${{ secrets.APP_ID }}
+          application_private_key: ${{ secrets.APP_PRIVATE_KEY }}
+          
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: prepare token for git credentials
+        id: git_magic
+        run: |
+          sudo apt-get install -y rpl
+          rpl 'steps.get_token.outputs.token' $PAT_TOKEN renovate-config.js
+        env:
+          PAT_TOKEN: ${{ steps.get_token.outputs.token }}
+
+      - name: Self-hosted Renovate
+        uses: renovatebot/github-action@v32.201.1
+        with:
+          token: 'x-access-token:${{ steps.otc-tests.outputs.token }}'
+          configurationFile: renovate-config.js
+        env:
+          LOG_LEVEL: 'debug'
+          RENOVATE_AUTODISCOVER: 'true'
+          RENOVATE_DRY_RUN: 'true'
