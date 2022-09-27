@@ -15,7 +15,7 @@ module.exports = {
     {
       description: 'lockFileMaintenance',
       automerge: true,
-      automergeType: 'branch',
+      prCreation: 'not-pending',
       matchUpdateTypes: [
         'pin',
         'digest',
