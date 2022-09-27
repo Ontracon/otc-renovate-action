@@ -33,7 +33,7 @@ jobs:
           sudo apt-get install -y rpl
           rpl 'steps.get_token.outputs.token' $PAT_TOKEN renovate-config.js
         env:
-          PAT_TOKEN: ${{ steps.get_token.outputs.token }}
+          PAT_TOKEN: ${{ steps.otc-tests.outputs.token }}
 
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v32.201.1
