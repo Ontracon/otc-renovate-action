@@ -14,7 +14,7 @@ module.exports = {
   packageRules: [
     {
       description: 'lockFileMaintenance',
-      automerge: false,
+      automerge: true,
       matchUpdateTypes: [
         'pin',
         'digest',
