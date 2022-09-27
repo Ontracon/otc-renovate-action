@@ -10,6 +10,7 @@ module.exports = {
   rebaseWhen: 'behind-base-branch',
   rebaseStalePrs: true,
   recreateClosed: true,
+  automerge: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
     {
