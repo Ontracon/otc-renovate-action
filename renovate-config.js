@@ -15,6 +15,7 @@ module.exports = {
     {
       description: 'lockFileMaintenance',
       automerge: true,
+      platformAutomerge: true,
       prCreation: 'immediate',
       matchUpdateTypes: [
         'pin',
