@@ -16,7 +16,7 @@ module.exports = {
     {
       description: 'Patch Updates',
       automerge: true,
-      automergeType: 'pr',
+      automergeType: 'branch',
       matchUpdateTypes: [
         'pin',
         'digest',
