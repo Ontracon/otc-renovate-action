@@ -15,7 +15,7 @@ module.exports = {
       automerge: true,
       automergeType: 'pr',
       platformAutomerge: true,
-      prCreation: 'not-pending',
+      prCreation: 'immediate',
       matchUpdateTypes: [
         'pin',
         'digest',
