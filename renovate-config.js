@@ -38,7 +38,7 @@ module.exports = {
       matchUpdateTypes: [
         'major',
       ],
-      dependencyDashboardApproval: true,
+      dependencyDashboardApproval: false,
       rebaseStalePrs: true,
       rebaseWhen: 'behind-base-branch',
       stabilityDays: 0,
