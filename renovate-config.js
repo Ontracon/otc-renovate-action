@@ -15,7 +15,7 @@ module.exports = {
       description: 'Patch and Minor Updates',
       automerge: true,
       automergeType: 'pr',
-      platformAutomerge: true,
+      platformAutomerge: false,
       prCreation: 'immediate',
       matchUpdateTypes: [
         'pin',
