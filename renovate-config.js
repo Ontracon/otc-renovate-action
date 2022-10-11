@@ -9,6 +9,7 @@ module.exports = {
   includeForks: false,
   recreateClosed: true,
   dependencyDashboard: true,
+  dependencyDashboardAutoclose: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
     {
