@@ -16,7 +16,7 @@ module.exports = {
     {
       description: 'Patch and Minor Updates',
       automerge: true,
-      automergeType: 'pr',
+      automergeType: 'branch',
       platformAutomerge: true,
       prCreation: 'immediate',
       matchUpdateTypes: [
