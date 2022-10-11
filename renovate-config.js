@@ -31,7 +31,7 @@ module.exports = {
     {
       description: 'lockFileMaintenance',
       automerge: false,
-      prCreation: 'not-pending',
+      prCreation: 'immediate',
       matchUpdateTypes: [
         'major',
       ],
