@@ -12,7 +12,7 @@ module.exports = {
   packageRules: [
     {
       description: 'Patch and Minor Updates',
-      automerge: true,
+      automerge: false,
       automergeType: 'pr',
       platformAutomerge: true,
       prCreation: 'immediate',
