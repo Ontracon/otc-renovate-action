@@ -10,12 +10,13 @@ module.exports = {
   recreateClosed: true,
   dependencyDashboard: true,
   dependencyDashboardAutoclose: true,
+  autodiscover: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
     {
       description: 'Patch and Minor Updates',
       automerge: true,
-      automergeType: 'pr',
+      automergeType: 'branch',
       platformAutomerge: false,
       prCreation: 'immediate',
       matchUpdateTypes: [
