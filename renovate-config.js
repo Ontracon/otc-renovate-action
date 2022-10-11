@@ -8,8 +8,8 @@ module.exports = {
   baseBranches: ['main'],
   includeForks: false,
   recreateClosed: true,
-  dependencyDashboard: true,
-  dependencyDashboardAutoclose: true,
+  dependencyDashboard: false,
+  dependencyDashboardAutoclose: false,
   autodiscover: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
