@@ -14,16 +14,13 @@ module.exports = {
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
     {
-      description: 'Patch and Minor Updates',
+      description: 'Patch Updates',
       automerge: true,
-      automergeType: 'pr',
-      platformAutomerge: true,
-      prCreation: 'immediate',
+      automergeType: 'branch',
       matchUpdateTypes: [
         'pin',
         'digest',
         'patch',
-        'minor',
         'lockFileMaintenance',
       ],
       dependencyDashboardApproval: false,
@@ -32,10 +29,13 @@ module.exports = {
       stabilityDays: 0,
     },
     {
-      description: 'lockFileMaintenance',
-      automerge: false,
+      description: 'Minor & major updates',
+      automerge: true,
+      automergeType: 'pr',
+      platformAutomerge: true,
       prCreation: 'immediate',
       matchUpdateTypes: [
+        'minor',
         'major',
       ],
       dependencyDashboardApproval: false,
