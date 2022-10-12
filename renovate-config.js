@@ -8,15 +8,15 @@ module.exports = {
   baseBranches: ['main'],
   includeForks: false,
   recreateClosed: true,
-  dependencyDashboard: false,
-  dependencyDashboardAutoclose: false,
+  dependencyDashboard: true,
+  dependencyDashboardAutoclose: true,
   autodiscover: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
     {
       description: 'Patch Updates',
       automerge: true,
-      automergeType: 'pr',
+      automergeType: 'branch',
       matchUpdateTypes: [
         'pin',
         'digest',
