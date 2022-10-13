@@ -42,7 +42,7 @@ module.exports = {
         'minor',
         'major',
       ],
-      dependencyDashboard: false,
+      dependencyDashboard: true,
       dependencyDashboardAutoclose: true,
       dependencyDashboardApproval: false,
       rebaseStalePrs: true,
