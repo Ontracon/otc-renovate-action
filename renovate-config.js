@@ -25,7 +25,7 @@ module.exports = {
       rebaseStalePrs: true,
       rebaseWhen: 'behind-base-branch',
       stabilityDays: 0,
-      dependencyDashboard: false,
+      dependencyDashboard: true,
       dependencyDashboardAutoclose: true,
     },
     {
