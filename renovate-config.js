@@ -13,8 +13,7 @@ module.exports = {
   reuseExistingBranch: true,
   updateLockFiles: true,
   transitiveRemediation: true,
-  dependencyDashboard: true,
-  dependencyDashboardAutoclose: true,
+
   packageRules: [
     {
       description: 'Patch Updates',
@@ -26,6 +25,8 @@ module.exports = {
         'patch',
         'lockFileMaintenance',
       ],
+      dependencyDashboard: false,
+      dependencyDashboardAutoclose: true,
       dependencyDashboardApproval: false,
       rebaseStalePrs: true,
       rebaseWhen: 'behind-base-branch',
@@ -41,7 +42,9 @@ module.exports = {
         'minor',
         'major',
       ],
-      dependencyDashboardApproval: true,
+      dependencyDashboard: false,
+      dependencyDashboardAutoclose: true,
+      dependencyDashboardApproval: false,
       rebaseStalePrs: true,
       rebaseWhen: 'behind-base-branch',
       stabilityDays: 0,
