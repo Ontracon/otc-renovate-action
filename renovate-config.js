@@ -10,6 +10,11 @@ module.exports = {
   recreateClosed: true,
   autodiscover: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
+  reuseExistingBranch: true,
+  updateLockFiles: true,
+  transitiveRemediation: true,
+  dependencyDashboard: true,
+  dependencyDashboardAutoclose: true,
   packageRules: [
     {
       description: 'Patch Updates',
@@ -25,8 +30,6 @@ module.exports = {
       rebaseStalePrs: true,
       rebaseWhen: 'behind-base-branch',
       stabilityDays: 0,
-      dependencyDashboard: true,
-      dependencyDashboardAutoclose: true,
     },
     {
       description: 'Minor & major updates',
@@ -38,7 +41,7 @@ module.exports = {
         'minor',
         'major',
       ],
-      dependencyDashboardApproval: false,
+      dependencyDashboardApproval: true,
       rebaseStalePrs: true,
       rebaseWhen: 'behind-base-branch',
       stabilityDays: 0,
