@@ -8,8 +8,6 @@ module.exports = {
   baseBranches: ['main'],
   includeForks: false,
   recreateClosed: true,
-  dependencyDashboard: true,
-  dependencyDashboardAutoclose: true,
   autodiscover: true,
   autodiscoverFilter: [ 'Ontracon/*' ],
   packageRules: [
@@ -27,6 +25,8 @@ module.exports = {
       rebaseStalePrs: true,
       rebaseWhen: 'behind-base-branch',
       stabilityDays: 0,
+      dependencyDashboard: false,
+      dependencyDashboardAutoclose: true,
     },
     {
       description: 'Minor & major updates',
