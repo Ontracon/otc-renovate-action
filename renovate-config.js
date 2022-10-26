@@ -25,7 +25,7 @@ module.exports = {
         'patch',
         'lockFileMaintenance',
       ],
-      dependencyDashboard: false,
+      dependencyDashboard: true,
       dependencyDashboardAutoclose: true,
       dependencyDashboardApproval: false,
       rebaseStalePrs: true,
